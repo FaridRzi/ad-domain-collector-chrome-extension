@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { width: 380px; margin: 12px; font: 13px system-ui, sans-serif; }
+  h2 { font-size: 13px; margin: 12px 0 4px; }
+  ul { list-style: none; margin: 0; padding: 0; max-height: 180px; overflow: auto; }
+  li label { display: flex; gap: 6px; padding: 2px 0; word-break: break-all; }
+  small { color: #777; }
+  button { margin: 10px 6px 0 0; padding: 6px 10px; cursor: pointer; }
+  textarea { width: 100%; box-sizing: border-box; margin-top: 8px; }
+</style>
+</head>
+<body>
+  <div id="status">Loading…</div>
+  <h2>Known ad / tracker domains (<span id="knownCount">0</span>)</h2>
+  <ul id="known"></ul>
+  <h2>Other third-party domains (<span id="otherCount">0</span>)</h2>
+  <small>Not on the blocklist. Tick only the ones you recognise as ads.</small>
+  <ul id="other"></ul>
+  <button id="copy">Copy selected</button>
+  <button id="refresh">Update blocklist</button>
+  <textarea id="output" rows="4" readonly placeholder="Selected domains appear here"></textarea>
+  <script src="popup.js"></script>
+</body>
+</html>

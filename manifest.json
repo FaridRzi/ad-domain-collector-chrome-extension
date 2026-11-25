@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Ad Domain Collector",
+  "version": "1.0.0",
+  "description": "Lists the ad and tracker domains a tab contacts, for adding to Pi-hole.",
+  "minimum_chrome_version": "111",
+  "permissions": ["webRequest", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html", "default_title": "Ad Domain Collector" }
+}
